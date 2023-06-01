@@ -334,7 +334,12 @@ namespace OpenSim.Grid.MoneyServer
                     return response;
                 }
                 else {
-                    m_log.InfoFormat("[MONEY XMLRPC]: handleClientLogin: SSL Common Name is \"{0}\"", commonName);
+                    if (commonName=="SSLCN:unknownName") {
+                        m_log.InfoFormat("[MONEY XMLRPC]: handleClientLogin: SSL Common Name is \"{0}\", but this name is ignored.", commonName);
+                    }
+                    else {
+                        m_log.InfoFormat("[MONEY XMLRPC]: handleClientLogin: SSL Common Name is \"{0}\"", commonName);
+                    }
                 }
 
             }
