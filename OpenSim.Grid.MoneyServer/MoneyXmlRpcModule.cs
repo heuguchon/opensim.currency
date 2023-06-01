@@ -314,17 +314,19 @@ namespace OpenSim.Grid.MoneyServer
         {
             //m_log.InfoFormat("[MONEY XMLRPC]: handleClientLogin: Start.");
 
-            GetSSLCommonName(request);
+            //GetSSLCommonName(request);
 
             Hashtable requestData = (Hashtable)request.Params[0];
             XmlRpcResponse response = new XmlRpcResponse();
-            Hashtable responseData = new Hashtable();
+            Hashtable responseData  = new Hashtable();
             response.Value = responseData;
 
             responseData["success"] = false;
             responseData["clientBalance"] = 0;
 
             // Check Client Cert
+            // Already checked?
+            /*
             if (m_moneyCore.IsCheckClientCert()) {
                 string commonName = GetSSLCommonName();
                 if (commonName=="") {
@@ -341,8 +343,8 @@ namespace OpenSim.Grid.MoneyServer
                         m_log.InfoFormat("[MONEY XMLRPC]: handleClientLogin: SSL Common Name is \"{0}\"", commonName);
                     }
                 }
-
             }
+            */
 
             string universalID = string.Empty;
             string clientUUID = string.Empty;
@@ -511,7 +513,7 @@ namespace OpenSim.Grid.MoneyServer
         {
             //m_log.InfoFormat("[MONEY XMLRPC]: handleClientLogout:");
 
-            GetSSLCommonName(request);
+            //GetSSLCommonName(request);
 
             Hashtable requestData = (Hashtable)request.Params[0];
             XmlRpcResponse response = new XmlRpcResponse();
