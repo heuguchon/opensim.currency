@@ -45,10 +45,6 @@
       </Configuration>
 
       <ReferencePath>../../bin/</ReferencePath>
-      <Reference name="System" localCopy="false"/>
-      <Reference name="System.Xml"/>
-      <Reference name="System.Data"/>
-      <Reference name="System.Drawing"/>
       <Reference name="System.Runtime.Remoting"/>
       <Reference name="Nini.dll" path="../../bin/"/>
       <Reference name="log4net.dll" path="../../bin/"/>
@@ -84,11 +80,7 @@
       </Configuration>
 
       <ReferencePath>../../bin/</ReferencePath>
-      <Reference name="System" localCopy="false"/>
-      <Reference name="System.Xml"/>
-      <Reference name="System.Drawing"/>
       <Reference name="System.Runtime.Remoting"/>
-      <Reference name="System.Security"/>
       <Reference name="Mono.Security"/>
       <Reference name="Nini.dll" path="../../bin/"/>
       <Reference name="log4net.dll" path="../../bin/"/>
@@ -123,13 +115,7 @@
         </Options>
       </Configuration>
       <ReferencePath>../../bin/</ReferencePath>
-      <Reference name="System"/>
-      <Reference name="System.Core"/>
-      <Reference name="System.Xml"/>
-      <Reference name="System.Data"/>
-      <Reference name="System.Drawing"/>
       <Reference name="System.Runtime.Remoting"/>
-      <Reference name="System.Security"/>
       <Reference name="Mono.Security"/>
       <Reference name="Nini.dll" path="../../bin/"/>
       <Reference name="log4net.dll" path="../../bin/"/>
