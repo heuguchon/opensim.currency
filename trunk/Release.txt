@@ -1,4 +1,10 @@
 
+DTL/NSL Money Server v0.9.3.0  (2023 8/11)
+    for .Net6
+
+DTL/NSL Money Server v0.9.2.2  (2023 6/2)
+    for Client Certificate
+
 DTL/NSL Money Server v0.9.1r01 (2020 4/11)
     Fix NPC Bug, Variable Port No. of Server
 
