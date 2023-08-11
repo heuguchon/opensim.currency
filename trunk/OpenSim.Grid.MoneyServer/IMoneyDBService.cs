@@ -25,6 +25,8 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#pragma warning disable IDE1006
+
 #pragma warning disable S1128 // Unused "using" should be removed
 using System;
 using System.Collections.Generic;
