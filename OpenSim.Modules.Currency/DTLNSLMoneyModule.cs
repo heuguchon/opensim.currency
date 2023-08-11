@@ -1693,7 +1693,7 @@ namespace OpenSim.Modules.Currency
                 }
                 else m_log.ErrorFormat("[MONEY MODULE]: LoginMoneyServer: Unable to login Money Server {0} for client [{1}]", m_moneyServURL, client.AgentId.ToString());
             }
-            else m_log.ErrorFormat("[MONEY MODULE]: LoginMoneyServer: Money Server is not available!!");
+            else m_log.ErrorFormat("[MONEY MODULE]: LoginMoneyServer: Money Server is not available!! Server URL is Null or empty!!");
 
             #endregion
 
