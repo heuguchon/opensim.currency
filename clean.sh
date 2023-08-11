@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -f  bin/*
+rm -rf bin/*
 rm -rf OpenSim.*/obj/*
 
 rm -f OpenSim.*/*.csproj
