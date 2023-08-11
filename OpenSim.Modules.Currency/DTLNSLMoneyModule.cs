@@ -275,7 +275,7 @@ namespace OpenSim.Modules.Currency
                 // [Economy] section
                 IConfig economyConfig = m_config.Configs["Economy"];
 
-                if (economyConfig.GetString("EconomyModule")!=Name) {
+                if (economyConfig.GetString("EconomyModule")!=Name && economyConfig.GetString("economymodule")!=Name) {
                     //m_enabled = false;
                     m_log.InfoFormat("[MONEY MODULE]: Initialise: The DTL/NSL MoneyModule is disabled");
                     return;
