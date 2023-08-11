@@ -184,13 +184,13 @@ namespace OpenSim.Data.MySQL.MySQLMoneyDataWrapper
 
     public class UserInfo
     {
-        string m_userID = string.Empty;
-        string m_simIP = string.Empty;
-        string m_avatarName = string.Empty;
+        string m_userID       = string.Empty;
+        string m_simIP        = string.Empty;
+        string m_avatarName   = string.Empty;
         string m_passwordHash = string.Empty;
-        int    m_avatarType  = (int)AvatarType.LOCAL_AVATAR;
-        int    m_avatarClass = (int)AvatarType.LOCAL_AVATAR;
-        string m_serverURL = string.Empty;
+        int    m_avatarType   = (int)AvatarType.LOCAL_AVATAR;
+        int    m_avatarClass  = (int)AvatarType.LOCAL_AVATAR;
+        string m_serverURL    = string.Empty;
 
         public string UserID
         {

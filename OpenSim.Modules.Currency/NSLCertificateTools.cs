@@ -27,11 +27,11 @@ namespace NSL.Certificate.Tools
     {
         private static readonly ILog m_log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
-        private X509Chain m_chain = null;
+        private X509Chain        m_chain  = null;
         private X509Certificate2 m_cacert = null;
         private X509Certificate2 m_mycert = null;
 
-        private Mono.Security.X509.X509Crl m_clientcrl  = null;
+        private Mono.Security.X509.X509Crl m_clientcrl = null;
 
 
         /// <summary>
@@ -91,7 +91,6 @@ namespace NSL.Certificate.Tools
         {
             return m_mycert;
         }
-
 
 
         /// <summary>
@@ -261,6 +260,7 @@ namespace NSL.Certificate.Tools
     }
 
 
+/*
     /// <summary>
     /// class NSL Certificate Policy
     /// </summary>
@@ -287,5 +287,5 @@ namespace NSL.Certificate.Tools
             }
         }
     }
-
+*/
 }

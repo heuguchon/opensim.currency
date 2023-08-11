@@ -132,7 +132,7 @@ namespace OpenSim.Grid.MoneyServer
         private void CheckTransaction(object sender, ElapsedEventArgs e)
         {
             long ticksToEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).Ticks;
-            int unixEpochTime =(int) ((DateTime.UtcNow.Ticks - ticksToEpoch )/10000000);
+            int unixEpochTime = (int)((DateTime.UtcNow.Ticks - ticksToEpoch)/10000000);
             int deadTime = unixEpochTime - DEAD_TIME;
             m_moneyDBService.SetTransExpired(deadTime);
         }
