@@ -4,7 +4,7 @@ dotnet ..\bin\prebuild.dll /target vs2022 /targetframework net6_0 /excludedir = 
 
     @echo Creating compile.bat
 rem To compile in debug mode
-    @echo dotnet build --configuration Release OpenSim.sln > compile.bat
+    @echo dotnet build --configuration Release OpenSim.Currency.sln > compile.bat
 rem To compile in release mode comment line (add rem to start) above and uncomment next (remove rem)
 rem    @echo dotnet build --configuration Debug OpenSim.sln > compile.bat
 :done
