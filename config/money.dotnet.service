@@ -1,4 +1,4 @@
-# /usr/lib/systemd/system/moneyserver.service for dotnet
+# /usr/lib/systemd/system/money.dotnet.service for dotnet
 #         v.0.1      by Fumi.Iseki
 #
 
@@ -19,12 +19,9 @@ User = root
 LimitSTACK = infinity
 
 WorkingDirectory = ${OPENSIM_DIR}/bin
-#TimeoutStopSec = 10
 
 ExecStart = /usr/bin/tmux new -d -s ${TMUX_OS_ID} -c ${OPENSIM_DIR}/bin ${OPENSIM_DIR}/bin/${OPENSIM_COM}
-ExecStop  = /usr/bin/tmux send-keys -t ${TMUX_OS_ID} C-m "quit" C-m ; /usr/bin/sleep ${WAIT_STOP_TM}
-#ExecStart = /usr/local/bin/tmux new -d -s ${TMUX_OS_ID} -c ${OPENSIM_DIR}/bin ${OPENSIM_DIR}/bin/${OPENSIM_COM}
-#ExecStop  = /usr/local/bin/tmux send-keys -t ${TMUX_OS_ID} C-m "quit" C-m ; /usr/bin/sleep ${WAIT_STOP_TM}
+#ExecStop  = /usr/bin/tmux send-keys -t ${TMUX_OS_ID} C-m "quit" C-m ; /usr/bin/sleep ${WAIT_STOP_TM}
 
 Restart = always
 
