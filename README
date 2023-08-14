@@ -2,10 +2,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
 //  DTL/NSL Secure Money Server for Linux/Unix
-//                                                        by Fumi.Iseki and NSL '19 11/5
+//                                                        by Fumi.Iseki and NSL 
 //                                                        http://www.nsl.tuis.ac.jp
-
-
 
 0. Outline
 
@@ -16,21 +14,23 @@
 
 Attention) 
   Client(SIM) certification causes an error in mono-5.16 and above.
-  Please use mono-5.0 - mono-5.14, if you want to use client(SIM) certification function.
 
 
 1. Install
 
- # cd opensim-0.9.x-source
- # tar xzfv opensim.currency-0.9.x.tar.gz 
- 
- # ./runprebuild.sh 
- # xbuild /target:CLean 
- # xbuild 
+1) Compile Opensim or Prepare compiled binary Opensim
 
- # cd opensim.currency-0.9.x
+2) When you use mono
+ # cd opensim
+ # svn co http://www.nsl.tuis.ac.jp/svn/opensim/opensim.currency/trunk opensim.currency
+ # cd opensim.currensy
  # ./build.sh
 
+3) When you use dotnet
+ # cd opensim
+ # svn co http://www.nsl.tuis.ac.jp/svn/opensim/opensim.currency/trunk opensim.currency
+ # cd opensim.currensy
+ # ./build.dotnet.sh
 
 
 2. Setting
@@ -99,53 +99,25 @@ Attention)
   - ex.) -helperuri http://localhost/currency/helper/   need last '/'
 
 
-
-3. Execution
-
-3-1. Robust Server
-
- # cd opensim-0.9.x-source
- # cd bin
- # mono Robust.exe
-
-
-3-2. Money Server
-
- # cd opensim-0.9.x-source
- # cd bin
- # mono MoneyServer.exe
-
-
-3-3. Region Server
-
- # cd opensim-0.9.x-source
- # cd bin
- # mono OpenSim.exe
-
-
-
-4. License.
+5. License.
 
  MIT License
 
 
-
-5. Attention.
+6. Attention.
 
  This is unofficial software. Please do not inquire to OpenSim development team or DTL Currency Processing 
  development team about this software. 
 
 
-
-6. Exemption from responsibility.
+7. Exemption from responsibility.
 
  This software is not guaranteed at all. The author doesn't assume the responsibility for the
  problem that occurs along with use, remodeling, and the re-distribution of this software at all.
  Please use everything by the self-responsibility.
 
 
-
-7. Address of thanks.
+8. Address of thanks.
 
  This Money Server is modified version of DTL Currency Processing.
 

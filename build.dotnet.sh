@@ -17,8 +17,9 @@ cp -f bin/net${DOTNETVER}/OpenSim.Data.MySQL.MySQLMoneyDataWrapper.dll $OPNSIMPA
 cp -f bin/net${DOTNETVER}/OpenSim.Modules.Currency.dll $OPNSIMPATH
 cp -f bin/net${DOTNETVER}/MoneyServer.dll $OPNSIMPATH
 cp -f bin/net${DOTNETVER}/MoneyServer $OPNSIMPATH
+cp -f bin/net${DOTNETVER}/MoneyServer.runtimeconfig.json $OPNSIMPATH
 
-
+#
 rm -f $OPNSIMPATH/OpenSim.Forge.Currency.dll
 
 if [ ! -f $OPNSIMPATH/MoneyServer.ini ]; then
@@ -27,8 +28,8 @@ else
 	cp $CONFIGPATH/MoneyServer.ini $OPNSIMPATH/MoneyServer.ini.example
 fi
 
-if [ ! -f $OPNSIMPATH/MoneyServer.exe.config ]; then
-	cp $CONFIGPATH/MoneyServer.exe.config $OPNSIMPATH
+if [ ! -f $OPNSIMPATH/MoneyServer.dll.config ]; then
+	cp $CONFIGPATH/MoneyServer.exe.config $OPNSIMPATH/MoneyServer.dll.config
 fi
 
 # Sample Server Cert file 1 for MoneyServer.exe

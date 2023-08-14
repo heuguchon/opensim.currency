@@ -2,10 +2,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
 //  OpenSim DTL/NSL Secure Money Server for Linux/Unix
-//                                                        by Fumi.Iseki and NSL 2020 9/4
+//                                                        by Fumi.Iseki and NSL 
 //                                                        http://www.nsl.tuis.ac.jp
-
-
 
 0. はじめに
 
@@ -20,23 +18,21 @@ Money Serverを誤魔化すことも不可能ではありません．つまり�
 お使いください．
 
 
-注）
-  mono-5.16以上では Client(SIM) 認証がエラーを起こします．
-  Client(SIM) 認証を使用する場合は mono-5.0 ～ mono-5.14 を使用してください．
-
-
 1. インストール
 
- # cd opensim-0.9.x-source
- # tar xzfv opensim.currency-0.9.x.tar.gz 
+1) OpenSim をコンパイルするか，コンポいる済みの OpenSim を用意します．
 
- # ./runprebuild.sh 
- # xbuild /target:CLean 
- # xbuild
-
- # cd opensim.currency-0.9.x
+2) Mono を使用する場合
+ # cd opensim
+ # svn co http://www.nsl.tuis.ac.jp/svn/opensim/opensim.currency/trunk opensim.currency
+ # cd opensim.currensy
  # ./build.sh
 
+2) dotnet を使用する場合
+ # cd opensim
+ # svn co http://www.nsl.tuis.ac.jp/svn/opensim/opensim.currency/trunk opensim.currency
+ # cd opensim.currensy
+ # ./build.dotnet.sh
 
 
 2. 設定
@@ -115,53 +111,24 @@ Money Serverを誤魔化すことも不可能ではありません．つまり�
  参考： http://www.nsl.tuis.ac.jp/xoops/modules/xpwiki/?OpenSim%2FMoneyServer%2FHelper%20Script
 
 
-
-3. 起動
-
-3-1. Robust Server
-
- # cd opensim-0.9.x-source
- # cd bin
- # mono Robust.exe
-
-
-3-2. Money Server
-
- # cd opensim-0.9.x-source
- # cd bin
- # mono MoneyServer.exe
-
-
-3-2. Region Server
-  Region Server は通常と同様に起動する．
-
- # cd opensim-0.9.x-source
- # cd bin
- # mono OpenSim.exe
-
-
-
-4. ライセンス
+3. ライセンス
 
   MIT License
 
 
-
-5. 注意事項
+4. 注意事項
 
 　このソフトウェアはNSLで改造された非公式のソフトウェアです．このソフトウェアに関して OpenSimの開発チームや
 　DTL Currency Processingの開発チームへのお問い合わせは行わないでください．
 
 
-
-6. 免責
+5. 免責
 
 　このソフトウェアは全くの無保証です．このソフトウェアの使用・改造・再配布に伴い発生する問題に関して，作者は一切の
   責任を負いません．全て自己責任でご使用ください．
 
 
-
-7. 謝辞
+6. 謝辞
 
   このプログラムは DTL Curremcy Processing を改造したものです．
 
