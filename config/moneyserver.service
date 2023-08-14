@@ -1,0 +1,29 @@
+# /usr/lib/systemd/system/moneyserver.service for dotnet
+#         v.0.1      by Fumi.Iseki
+#
+
+[Unit]
+Description = OpenSimulator
+After = network-online.target
+
+[Service]
+Environment = OPENSIM_DIR=/usr/local/opensim
+Environment = OPENSIM_COM=MoneyServer
+Environment = OPENSIM_DLL=MoneyServer.dll
+Environment = EXEC_COM=/usr/bin/dotnet
+Environment = TMUX_OS_ID=opensim_money
+
+Type = forking
+User = root
+LimitSTACK = infinity
+
+WorkingDirectory = /usr/local/opensim/bin
+TimeoutStopSec = 60
+
+ExecStart = /usr/bin/tmux new -d -s ${TMUX_OS_ID} -c ${OPENSIM_DIR}/bin ${OPENSIM_DIR}/bin/${OPENSIM_COM}
+ExecStop  = /usr/bin/tmux send-keys -t ${TMUX_OS_ID} C-m "quit" C-m ; /usr/bin/sleep 10
+
+Restart = always
+
+[Install]
+WantedBy = multi-user.target
