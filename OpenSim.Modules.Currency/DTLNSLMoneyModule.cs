@@ -302,18 +302,18 @@ namespace OpenSim.Modules.Currency
                 m_cacertFilename  = economyConfig.GetString ("CACertFilename",  m_cacertFilename);
 
                 if (m_cacertFilename != "") {
-					m_certVerify.SetPrivateCA(m_cacertFilename);
-				}
-         		else {
+                    m_certVerify.SetPrivateCA(m_cacertFilename);
+                }
+                else {
                     m_checkServerCert = false;
-				}
+                }
 
                 if (m_checkServerCert) {
-					m_log.Info("[MONEY MODULE]: Initialise: Execute Authentication of Server. CA Cert File is " + m_cacertFilename);
-				}
-				else {
+                    m_log.Info("[MONEY MODULE]: Initialise: Execute Authentication of Server. CA Cert File is " + m_cacertFilename);
+                }
+                else {
                     m_log.Info("[MONEY MODULE]: Initialise: No check Money Server or CACertFilename is empty. CheckServerCert is false.");
-				}
+                }
 
                 //ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(m_certVerify.ValidateServerCertificate);
                 //ServicePointManager.UseNagleAlgorithm = false;
