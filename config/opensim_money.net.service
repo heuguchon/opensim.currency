@@ -1,10 +1,11 @@
-# /usr/lib/systemd/system/money.dotnet.service for dotnet
-#         v.0.1      by Fumi.Iseki
+# /usr/lib/systemd/system/opensim_money.net.service 
+#
+#         v.0.2      by Fumi.Iseki
 #
 
 [Unit]
-Description = OpenSimulator
-After = network-online.target
+Description = MoneyServer for OpenSimulator
+After = opensim_robust.net.service
 
 [Service]
 Environment = OPENSIM_DIR=/usr/local/opensim_server
@@ -12,7 +13,7 @@ Environment = OPENSIM_COM=MoneyServer
 Environment = OPENSIM_DLL=MoneyServer.dll
 Environment = EXEC_COM=/usr/bin/dotnet
 Environment = TMUX_OS_ID=opensim_money
-Environment = WAIT_STOP_TM=5
+#Environment = WAIT_STOP_TM=5
 
 Type = forking
 User = root

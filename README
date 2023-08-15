@@ -30,7 +30,7 @@ Attention)
  # cd opensim
  # svn co http://www.nsl.tuis.ac.jp/svn/opensim/opensim.currency/trunk opensim.currency
  # cd opensim.currensy
- # ./build.dotnet.sh
+ # ./build.net.sh
 
 
 2. Setting

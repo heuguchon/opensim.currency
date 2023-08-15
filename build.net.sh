@@ -9,7 +9,7 @@ echo "DTL/NSL_CURRENCY"
 echo "==================="
 
 ./clean.sh
-./runprebuild.dotnet.sh
+./runprebuild.net.sh
 dotnet build -c Release OpenSim.Currency.sln || exit 1
 
 echo
