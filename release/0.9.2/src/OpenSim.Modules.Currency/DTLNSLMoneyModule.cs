@@ -275,7 +275,7 @@ namespace OpenSim.Modules.Currency
                 // [Economy] section
                 IConfig economyConfig = m_config.Configs["Economy"];
 
-                if (economyConfig.GetString("EconomyModule")!=Name) {
+                if (economyConfig.GetString("EconomyModule")!=Name && economyConfig.GetString("economymodule")!=Name) {
                     //m_enabled = false;
                     m_log.InfoFormat("[MONEY MODULE]: Initialise: The DTL/NSL MoneyModule is disabled");
                     return;
@@ -1693,7 +1693,7 @@ namespace OpenSim.Modules.Currency
                 }
                 else m_log.ErrorFormat("[MONEY MODULE]: LoginMoneyServer: Unable to login Money Server {0} for client [{1}]", m_moneyServURL, client.AgentId.ToString());
             }
-            else m_log.ErrorFormat("[MONEY MODULE]: LoginMoneyServer: Money Server is not available!!");
+            else m_log.ErrorFormat("[MONEY MODULE]: LoginMoneyServer: Money Server is not available!! Server URL is Null or empty!!");
 
             #endregion
 

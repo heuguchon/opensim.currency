@@ -41,17 +41,17 @@ namespace OpenSim.Data.MySQL.MySQLMoneyDataWrapper
 
         //bool updateBalanceStatus(string userID,int status);
 
-        bool withdrawMoney(UUID transactionID,string senderID, int amount);
+        bool withdrawMoney(UUID transactionID, string senderID, int amount);
 
-        bool giveMoney(UUID transactionID,string receiverID, int amount);
+        bool giveMoney(UUID transactionID, string receiverID, int amount);
 
         bool addTransaction(TransactionData transaction);
 
-        bool updateTransactionStatus(UUID transactionID, int status,string description);
+        bool updateTransactionStatus(UUID transactionID, int status, string description);
 
         TransactionData FetchTransaction(UUID transactionID);
 
-        TransactionData[] FetchTransaction(string userID, int startTime, int endTime, uint index,uint retNum);
+        TransactionData[] FetchTransaction(string userID, int startTime, int endTime, uint index, uint retNum);
 
         int getTransactionNum(string userID, int startTime, int endTime);
 
