@@ -2,7 +2,7 @@
 
 CONFIGPATH=./config
 OPNSIMPATH=../bin
-DOTNETVER=6.0
+DOTNETVER=8.0
 
 echo "==================="
 echo "DTL/NSL_CURRENCY"
